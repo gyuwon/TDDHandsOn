@@ -1,0 +1,12 @@
+.vs
+.vscode
+
+bin
+obj
+
+.gradle
+.classpath
+.project
+.settings
+
+node_modules
