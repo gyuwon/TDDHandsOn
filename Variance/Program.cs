@@ -14,6 +14,12 @@ namespace Variance
                 return;
             }
 
+            if (n == 1)
+            {
+                Console.WriteLine("데이터가 부족해 분산을 계산할 수 없습니다. 2개 이상의 데이터를 입력해 주세요.");
+                return;
+            }
+
             double[] source = new double[n];
             for (int i = 0; i < n; i++)
             {
