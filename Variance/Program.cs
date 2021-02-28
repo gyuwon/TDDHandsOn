@@ -1,48 +1,40 @@
 ﻿using System;
+using System.Linq;
 
 namespace Variance
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) => Console.WriteLine(args.Length switch
         {
-            int n = args.Length;
+            0 => "입력된 데이터가 없습니다.",
+            1 => "데이터가 부족해 분산을 계산할 수 없습니다. 2개 이상의 데이터를 입력해 주세요.",
+            _ => GetCalculationOutput(args),
+        });
 
-            if (n == 0)
-            {
-                Console.WriteLine("입력된 데이터가 없습니다.");
-                return;
-            }
+        private static string GetCalculationOutput(string[] args)
+        {
+            double[] source = ParseArguments(args);
+            double variance = CalculateVariance(source);
+            return $"분산: {variance}";
+        }
 
-            if (n == 1)
-            {
-                Console.WriteLine("데이터가 부족해 분산을 계산할 수 없습니다. 2개 이상의 데이터를 입력해 주세요.");
-                return;
-            }
+        private static double[] ParseArguments(string[] args)
+            => args.Select(double.Parse).ToArray();
 
-            double[] source = new double[n];
-            for (int i = 0; i < n; i++)
-            {
-                source[i] = double.Parse(args[i]);
-            }
+        private static double CalculateVariance(double[] source)
+        {
+            double sumOfSquares = CalculateSumOfSquares(source);
+            int degreesOfFreedom = source.Length - 1;
+            return sumOfSquares / degreesOfFreedom;
+        }
 
-            double sum = 0.0;
-            for (int i = 0; i < n; i++)
-            {
-                sum += source[i];
-            }
-
-            double mean = sum / n;
-
-            double sumOfSquares = 0.0;
-            for (int i = 0; i < n; i++)
-            {
-                sumOfSquares += (source[i] - mean) * (source[i] - mean);
-            }
-
-            double variance = sumOfSquares / (n - 1);
-
-            Console.WriteLine($"분산: {variance}");
+        private static double CalculateSumOfSquares(double[] source)
+        {
+            double mean = source.Average();
+            return source.Select(x => mean - x)
+                         .Select(d => d * d)
+                         .Sum();
         }
     }
 }
