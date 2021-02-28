@@ -8,6 +8,12 @@ namespace Variance
         {
             int n = args.Length;
 
+            if (n == 0)
+            {
+                Console.WriteLine("입력된 데이터가 없습니다.");
+                return;
+            }
+
             double[] source = new double[n];
             for (int i = 0; i < n; i++)
             {
