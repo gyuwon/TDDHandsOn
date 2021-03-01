@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
-import commentRefiner from "./content-refiners/trimWhitespaces";
 
-function commentComposerFactory() {
+function commentComposerFactory({ commentRefiner }) {
   return ({ author, content }) => {
     return {
       id: uuidv4(),
