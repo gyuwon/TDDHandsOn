@@ -3,6 +3,7 @@ function refineText(source, options) {
     normalizeWhitespaces,
     compactWhitespaces,
     maskBannedWords,
+    trimWhitespaces,
   ].reduce((value, filter) => filter(value, options), source);
 }
 
@@ -22,6 +23,10 @@ function maskBannedWords(value, options) {
 
 function maskBannedWord(value, bannedWord) {
   return value.replace(bannedWord, "*".repeat(bannedWord.length));
+}
+
+function trimWhitespaces(value) {
+  return value.trim();
 }
 
 module.exports = refineText;
