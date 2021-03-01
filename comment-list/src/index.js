@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import commentRefiner from "./content-refiners/trimWhitespaces";
+import commentRefiner from "./content-refiners/compactWhitespaces";
 import commentComposerFactory from "./commentComposerFactory";
 
 const commentComposer = commentComposerFactory({ commentRefiner });
