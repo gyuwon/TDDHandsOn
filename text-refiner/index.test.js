@@ -1,9 +1,7 @@
 const sut = require("./index");
 
-test('sut transforms "hello  world" to "hello world"', () => {
-  expect(sut("hello  world")).toBe("hello world");
-});
-
-test('sut transforms "hello    world" to "hello world"', () => {
-  expect(sut("hello    world")).toBe("hello world");
+test("sut correcty transforms source", () => {
+  for (const source of ["hello  world", "hello   world", "hello    world"]) {
+    expect(sut(source)).toBe("hello world");
+  }
 });
