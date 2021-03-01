@@ -6,10 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.stream.Stream;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.powermock.reflect.Whitebox;
 
 import numberguessing.PositiveIntegerGeneratorStub;
 
@@ -334,6 +336,47 @@ public class AppModel_specs {
 
         boolean actual = sut.isCompleted();
         assertTrue(actual);
+    }
+
+    @Disabled
+    @ParameterizedTest
+    @ValueSource(strings = { "foo" })
+    void print_appends_string_to_output_buffer(String s) throws Exception {
+        var sut = new AppModel(new PositiveIntegerGeneratorStub(50));
+        sut.flushOutput();
+
+        Whitebox.invokeMethod(sut, "print", s);
+
+        var output = (StringBuffer) Whitebox.getField(AppModel.class, "outputBuffer").get(sut);
+        String actual = output.toString();
+        assertThat(actual).isEqualTo(s);
+    }
+
+    @Disabled
+    @ParameterizedTest
+    @ValueSource(strings = { "foo" })
+    void println_appends_string_with_line_separator_to_output_buffer(String s) throws Exception {
+        var sut = new AppModel(new PositiveIntegerGeneratorStub(50));
+        sut.flushOutput();
+
+        Whitebox.invokeMethod(sut, "println", s);
+
+        var output = (StringBuffer) Whitebox.getField(AppModel.class, "outputBuffer").get(sut);
+        String actual = output.toString();
+        assertThat(actual).isEqualTo(s + System.lineSeparator());
+    }
+
+    @Disabled
+    @Test
+    void printLines_correctly_joins_lines() throws Exception {
+        var sut = new AppModel(new PositiveIntegerGeneratorStub(50));
+        sut.flushOutput();
+
+        Whitebox.invokeMethod(sut, "printLines", "foo", "bar");
+
+        var output = (StringBuffer) Whitebox.getField(AppModel.class, "outputBuffer").get(sut);
+        String actual = output.toString();
+        assertThat(actual).isEqualTo(String.join(NEW_LINE, "foo", "bar"));
     }
 
 }
