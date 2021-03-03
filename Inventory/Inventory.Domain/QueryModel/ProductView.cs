@@ -6,5 +6,6 @@
         string ProductCode,
         string ProductName,
         decimal ListPrice,
-        decimal Discount);
+        decimal Discount,
+        decimal SellingPrice = default);
 }
