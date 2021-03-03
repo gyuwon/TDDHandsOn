@@ -27,6 +27,7 @@ namespace Inventory.QueryModel
                 source.ProductCode,
                 source.ProductName,
                 source.Pricing.ListPrice,
-                source.Pricing.Discount);
+                source.Pricing.Discount,
+                source.Pricing.CalculateSellingPrice());
     }
 }
