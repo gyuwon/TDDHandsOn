@@ -39,6 +39,7 @@ function renderProducts(products) {
           <th>Producdt Name</th>
           <th>List Price</th>
           <th>Discount</th>
+          <th>Selling Price</th>
         </tr>
       </thead>
       <tbody>{products.map((product) => renderProduct(product))}</tbody>
@@ -54,6 +55,7 @@ function renderProduct(product) {
       <td>{product.productName}</td>
       <td>{product.listPrice}</td>
       <td>{product.discount}</td>
+      <td>{product.sellingPrice}</td>
     </tr>
   );
 }
