@@ -18,9 +18,23 @@ Fast campus 강의 ['현실 세상의 TDD'](https://www.fastcampus.co.kr/dev_red
 
 Java로 작성된 1과 100 사이 임의의 정수를 맞추는 텍스트 기반 게임입니다. 단일 플레이어 모드와 다중 플레이어 모드를 제공합니다.
 
+### comment-list
+
+코멘트 목록을 관리하는 React 응용프로그램 입니다.
+
+### ProductImporter
+
+여러 상품 공급자로부터 상품을 공급받아 인벤토리에 동기화하는 프로세스를 제공하는 Java 라이브러리 입니다.
+
+### Inventory
+
+온라인으로 판매할 상품 정보가 저장된 인벤토리를 관리하는 시스템입니다. ASP.NET Core와 React를 사용해 구현됩니다.
+
 ## 세션 별 코드
 
 태그를 통해 실습이 포함된 각 세션 별 실습 진행에 기반이되는 코드와 실습이 완료된 코드를 볼 수 있습니다.
+
+### 1부. 테스트 주도 개발 기초
 
 | 세션             |              기반 코드              |                  완료 코드                  |
 | ---------------- | :---------------------------------: | :-----------------------------------------: |
@@ -32,3 +46,33 @@ Java로 작성된 1과 100 사이 임의의 정수를 맞추는 텍스트 기반
 | 장난감-1         |       [`1-9`](../../tree/1-9)       |                     N/A                     |
 | 장난감-2         | [`1-10-base`](../../tree/1-10-base) | [`1-10-complete`](../../tree/1-10-complete) |
 | 장난감-3         | [`1-11-base`](../../tree/1-11-base) | [`1-11-complete`](../../tree/1-11-complete) |
+
+### 2부. 테스트 주도 개발의 깊은 곳
+
+| 세션                           |              기반 코드              |                  완료 코드                  |
+| ------------------------------ | :---------------------------------: | :-----------------------------------------: |
+| 환경 변화와 적응력             |  [`2-2-base`](../../tree/2-2-base)  |  [`2-2-complete`](../../tree/2-2-complete)  |
+| 입력과 출력                    |  [`2-3-base`](../../tree/2-3-base)  |  [`2-3-complete`](../../tree/2-3-complete)  |
+| 테스트 대역                    |  [`2-4-base`](../../tree/2-4-base)  |  [`2-4-complete`](../../tree/2-4-complete)  |
+| Mockists vs. Classicists       |  [`2-5-base`](../../tree/2-5-base)  |  [`2-5-complete`](../../tree/2-5-complete)  |
+| Should I test private methods? |  [`2-6-base`](../../tree/2-6-base)  |  [`2-6-complete`](../../tree/2-6-complete)  |
+| 인수 테스트 주도 개발          | [`2-10-base`](../../tree/2-10-base) | [`2-10-complete`](../../tree/2-10-complete) |
+
+## 개발 도구
+
+### Visual Studio Code
+
+https://code.visualstudio.com/
+
+설치된 확장
+
+- [Babel JavaScript](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel)
+- [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+- [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+### Visual Studio
+
+Visual Studio Community 2019
+
+https://visualstudio.microsoft.com/vs/
