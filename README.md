@@ -76,6 +76,10 @@ https://nodejs.org/en/download/
 
 https://github.com/AdoptOpenJDK/openjdk11-binaries/releases
 
+### Gradle
+
+https://gradle.org/install/
+
 ### Visual Studio Code
 
 https://code.visualstudio.com/
