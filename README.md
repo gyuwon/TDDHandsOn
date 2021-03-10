@@ -12,7 +12,7 @@ TDD 또는 강의와 관련된 질문과 토론을 위해 Discord 서버를 만�
 
 ### Variance
 
-분산 통계량을 계산하는 .NET Core 콘솔 응용프로그램 입니다.
+분산 통계량을 계산하는 .NET 5 콘솔 응용프로그램 입니다.
 
 ### text-refiner
 
@@ -32,7 +32,7 @@ Java로 작성된 1과 100 사이 임의의 정수를 맞추는 텍스트 기반
 
 ### Inventory
 
-온라인으로 판매할 상품 정보가 저장된 인벤토리를 관리하는 시스템입니다. ASP.NET Core와 React를 사용해 구현됩니다.
+온라인으로 판매할 상품 정보가 저장된 인벤토리를 관리하는 시스템입니다. ASP.NET Core 5와 React를 사용해 구현됩니다.
 
 ## 세션 별 코드
 
@@ -63,6 +63,18 @@ Java로 작성된 1과 100 사이 임의의 정수를 맞추는 텍스트 기반
 | 인수 테스트 주도 개발          | [`2-10-base`](../../tree/2-10-base) | [`2-10-complete`](../../tree/2-10-complete) |
 
 ## 개발 도구
+
+### .NET 5 SDK
+
+https://dotnet.microsoft.com/download/dotnet/5.0
+
+### Node.js
+
+https://nodejs.org/en/download/
+
+### OpenJDK 11
+
+https://github.com/AdoptOpenJDK/openjdk11-binaries/releases
 
 ### Visual Studio Code
 
