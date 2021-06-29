@@ -10,7 +10,7 @@ function App({ commentComposer }) {
       <Form
         commentComposer={commentComposer}
         onNewComment={(newComment) =>
-          setComments([...[...comments], newComment])
+          setComments([...comments, newComment])
         }
       />
       <CommentList comments={comments} />
